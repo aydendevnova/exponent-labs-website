@@ -9,10 +9,10 @@ import {
 } from "@/components/sections"
 
 const sections = [
-  { id: "introduction", label: "Intro" },
-  { id: "concept", label: "Concept" },
-  { id: "product", label: "Product" },
-  { id: "result", label: "Result" },
+  { id: "projects", label: "Projects" },
+  { id: "team", label: "Team" },
+  { id: "services", label: "Services" },
+  { id: "finale", label: "Finale" },
 ]
 
 export default function Page() {

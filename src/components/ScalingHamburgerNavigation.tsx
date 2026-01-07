@@ -62,7 +62,7 @@ export function ScalingHamburgerNavigation({
       <div className="hamburger-nav absolute top-8 right-8 rounded-3xl">
         {/* Expanding background */}
         <div
-          className={`hamburger-nav-bg absolute top-0 right-0 bg-[#e2e1df] rounded-[1.75em] transition-all duration-700 ease-[cubic-bezier(0.5,0.5,0,1)] ${
+          className={`hamburger-nav-bg absolute top-0 right-0 bg-[#1a1a1f] rounded-[1.75em] transition-all duration-700 ease-[cubic-bezier(0.5,0.5,0,1)] ${
             isActive ? "w-full h-full" : "w-14 h-14"
           }`}
         />
@@ -75,7 +75,7 @@ export function ScalingHamburgerNavigation({
               : "scale-[0.15] opacity-0 invisible"
           }`}
         >
-          <p className="opacity-50 tracking-[0.1em] uppercase font-mono text-base font-normal mb-0">
+          <p className="opacity-50 tracking-[0.1em] uppercase font-mono text-base font-normal mb-0 text-white">
             Menu
           </p>
 
@@ -84,7 +84,7 @@ export function ScalingHamburgerNavigation({
               <li key={index} className="m-0 p-0 list-none">
                 <a
                   href={link.href}
-                  className="hamburger-nav-link text-[#131313] flex justify-between items-center no-underline group"
+                  className="hamburger-nav-link text-white flex justify-between items-center no-underline group"
                   aria-current={link.isCurrent ? "page" : undefined}
                   onClick={close}
                 >
@@ -117,12 +117,12 @@ export function ScalingHamburgerNavigation({
           aria-label={isActive ? "Close menu" : "Open menu"}
         >
           <div
-            className={`hamburger-bar absolute bg-[#131313] w-[40%] h-0.5 transition-transform duration-700 ease-[cubic-bezier(0.5,0.5,0,1)] ${
+            className={`hamburger-bar absolute bg-white w-[40%] h-0.5 transition-transform duration-700 ease-[cubic-bezier(0.5,0.5,0,1)] ${
               isActive ? "rotate-45 translate-y-0" : "-translate-y-[0.15em]"
             }`}
           />
           <div
-            className={`hamburger-bar absolute bg-[#131313] w-[40%] h-0.5 transition-transform duration-700 ease-[cubic-bezier(0.5,0.5,0,1)] ${
+            className={`hamburger-bar absolute bg-white w-[40%] h-0.5 transition-transform duration-700 ease-[cubic-bezier(0.5,0.5,0,1)] ${
               isActive ? "-rotate-45 translate-y-0" : "translate-y-[0.15em]"
             }`}
           />

@@ -1,0 +1,40 @@
+/* Animation transitions - kept in CSS for cubic-bezier and CSS variables */
+.btnIconIconBg {
+  transition: transform 0.525s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+.btnIconIconArrow {
+  transition: transform 0.525s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+.btnIconContentText,
+.btnIconLinkText {
+  --text-duplicate-distance: 1.5em;
+  text-shadow: 0px var(--text-duplicate-distance) currentColor;
+  transition: transform 0.525s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+.btnIconContentBg {
+  transform: translate(0, 175%) rotate(15deg);
+  transition: transform 0.525s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+/* Hover Animations */
+@media (hover: hover) and (pointer: fine) {
+  .btnIconLink:hover .btnIconContentText,
+  .btnIconLink:hover .btnIconLinkText {
+    transform: translate(0px, calc(-1 * var(--text-duplicate-distance)));
+  }
+
+  .btnIconLink:hover .btnIconIconBg {
+    transform: rotate(90deg);
+  }
+
+  .btnIconLink:hover .btnIconIconArrow {
+    transform: translate(200%, 0px);
+  }
+
+  .btnIconLink:hover .btnIconContentBg {
+    transform: translate(0px, 0%) rotate(0deg);
+  }
+}

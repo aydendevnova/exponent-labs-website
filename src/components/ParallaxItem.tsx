@@ -65,7 +65,7 @@ export function ParallaxItem({
           if (!trigger) return
 
           const target = isTarget
-            ? trigger.querySelector("[data-parallax-target]") || trigger
+            ? trigger.querySelector("[data-parallax-target]") ?? trigger
             : trigger
 
           const prop = direction === "horizontal" ? "xPercent" : "yPercent"
@@ -91,7 +91,7 @@ export function ParallaxItem({
       return () => mm.revert()
     }
 
-    loadGsap()
+    void loadGsap()
   }, [direction, start, end, scrollStart, scrollEnd, scrub, disable, isTarget])
 
   return (
