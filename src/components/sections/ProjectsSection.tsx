@@ -143,6 +143,10 @@ function ProjectCardComponent({
   useEffect(() => {
     if (!cardRef.current) return
 
+    // Disable animations on mobile (< 768px)
+    const isMobile = window.matchMedia("(max-width: 767px)").matches
+    if (isMobile) return
+
     const direction = index % 2 === 0 ? -1 : 1
     const xOffset = 120 * direction
 
